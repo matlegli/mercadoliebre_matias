@@ -41,39 +41,53 @@ header .form {
 header div.logo {
   padding: 10px;
 }
-header .form {
-  display: flex;
-  align-items: center;
-  padding: 2px;
-  font-size: 11px;
-}
+
 header nav {
   font-size: 12px;
-  margin-left: 20px;
+  margin-left: 0px;
+  display: none;
 }
-
-header ul li {
+nav ul.menu1{
+  display: flex;
+  flex-direction: column;
+}
+nav ul.menu2{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 10px;
+}
+nav ul li {
   list-style-type: none;
 }
 
-header ul li a {
+nav ul li a {
   text-decoration: none;
   color: #000;
 }
 
+header .form {
+  display: flex;
+  position: relative;
+  font-size: 11px;
+  align-items: center;
+  width: 50%;
+}
+
 header .form .input {
   background-color: #fff;
-  border: 1px solid #000;
+  border: 1px solid #0000;
   outline: none;
   color: #666;
-  padding: 2px;
+  padding: 3px;
+  width: -webkit-fill-available;
+  border-radius: 4px;
 }
 
 header .form .submit {
   background-color: #fff;
   border: 1px solid #000;
-  color: #666;
-  width: 10%;
+
 }
 
 div.burger-menu {
@@ -157,8 +171,9 @@ main section article i {
   position: absolute;
   right: 20px;
   top: -15px;
-}
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
 
+}
 main section h3 {
   margin: 20px 0px;
 }
@@ -173,15 +188,49 @@ article div.main-article {
   padding: 15px;
 }
 
-.icons{
-  color:blue;
+footer{
+  background-color: #fff;
+}
+
+footer ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 34px;
+}
+
+footer i{
+  size: 10px;
+  color: #1259c3;
+  margin-bottom: 10px;
+}
+
+footer h3{
+  font-size: 14px;
+  color: #666;
+
+}
+
+footer p{
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+footer h4{
+  font-size: 12px;
+  color: #666;
+  padding: 10px;
+  font-weight: 100;
 }
 
 @media (min-width: 361px) {
   main section article .description {
     display: block;
   }
-
+  header nav {
+    display: block;
+  }
   main section article {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
@@ -207,5 +256,15 @@ article div.main-article {
 @media (min-width: 769px) {
   main section div.products article {
     width: 22%;
+  }
+  div nav{
+    display: flex;
+    position: relative;
+    bottom: 20px;
+    justify-content: space-between;
+
+  }
+  div.burger-menu {
+    display: none;
   }
 }
